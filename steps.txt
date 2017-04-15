@@ -1,0 +1,8 @@
+1-new folder  npm init
+2-npm install express mongojs ejs body-parser --save
+
+
+admin
+123
+
+mongodb://<dbuser>:<dbpassword>@ds155130.mlab.com:55130/meantodos
