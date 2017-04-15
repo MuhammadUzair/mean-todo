@@ -1,6 +1,6 @@
 # Todo app in MEAN Stack using Angular 4
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+For Demo [todos-mean-app.herokuapp.com](https://todos-mean-app.herokuapp.com/)
 
 ## Install dependencies
 
