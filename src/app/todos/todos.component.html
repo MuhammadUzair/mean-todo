@@ -17,9 +17,9 @@
             <input type="text" [class.hidden]="!todo.isEditMode" [value]="todo.text" (keypress)="updateTodoText($event, todo)">
             <input type="button" [class.hidden]="!todo.isEditMode" value="Cancel" (click)="setEditState(todo, false)" class="btn btn-warning">
         </div>  
-        <div class="col-md-4 btnss">
-            <input (click)="deleteTodo(todo)" type="button" class="btn btn-danger pull-right btnss" value="Delete"> 
-            <input [class.disabled]="todo.isCompleted" (click)="setEditState(todo, true)" type="button" class="btn btn-default pull-right" value="Edit"> 
+        <div class="col-md-4 pull-right">
+            <input (click)="deleteTodo(todo)" type="button" class="btn btn-danger btns" value="Delete"> 
+            <input [class.disabled]="todo.isCompleted" (click)="setEditState(todo, true)" type="button" class="btn btn-default pull-right btns" value="Edit"> 
         </div>  
     </div>
 </div>
