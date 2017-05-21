@@ -160,6 +160,7 @@ var TodosComponent = (function () {
         var _this = this;
         var result;
         var newTodo = {
+            _id: todoText._id,
             text: todoText.value,
             isCompleted: false
         };
@@ -205,12 +206,14 @@ var TodosComponent = (function () {
     };
     TodosComponent.prototype.deleteTodo = function (todo) {
         var todos = this.todos;
+        console.log("todo", todo);
+        console.log("todos", todos);
+        debugger;
         this._todoService.deleteTodo(todo._id)
             .subscribe(function (data) {
             if (data.n == 1) {
                 for (var i = 0; i < todos.length; i++) {
-                    //if(todos[i].id == todo._id){
-                    if (todo._id) {
+                    if (todos[i]._id == todo._id) {
                         todos.splice(i, 1);
                     }
                 }

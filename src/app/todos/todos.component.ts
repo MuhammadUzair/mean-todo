@@ -26,6 +26,7 @@ export class TodosComponent implements OnInit {
   addTodo(event, todoText){
       var result;
       var newTodo = {
+        _id: todoText._id,
         text: todoText.value,
         isCompleted: false
       };
@@ -76,13 +77,11 @@ export class TodosComponent implements OnInit {
   
   deleteTodo(todo){
     var todos = this.todos;
-    
     this._todoService.deleteTodo(todo._id)
       .subscribe(data => {
         if(data.n == 1){
           for(var i = 0; i < todos.length; i++){
-            //if(todos[i].id == todo._id){
-             if(todo._id){
+            if(todos[i]._id == todo._id){
               todos.splice(i, 1);
             }
           }
