@@ -28,7 +28,7 @@ export class TodosComponent implements OnInit {
       var newTodo = {
         _id: todoText._id,
         text: todoText.value,
-        isCompleted: false
+        isCompleted: false,
       };
       
       result = this._todoService.saveTodo(newTodo);

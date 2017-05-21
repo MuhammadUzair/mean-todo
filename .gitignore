@@ -1,6 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 steps.txt
+
 # compiled output
 /dist
 /tmp
@@ -9,6 +10,7 @@ steps.txt
 
 # dependencies
 /node_modules
+
 
 # IDEs and editors
 /.idea

@@ -162,7 +162,7 @@ var TodosComponent = (function () {
         var newTodo = {
             _id: todoText._id,
             text: todoText.value,
-            isCompleted: false
+            isCompleted: false,
         };
         result = this._todoService.saveTodo(newTodo);
         result.subscribe(function (x) {
@@ -205,10 +205,8 @@ var TodosComponent = (function () {
         }
     };
     TodosComponent.prototype.deleteTodo = function (todo) {
-        var todos = this.todos;
         console.log("todo", todo);
-        console.log("todos", todos);
-        debugger;
+        var todos = this.todos;
         this._todoService.deleteTodo(todo._id)
             .subscribe(function (data) {
             if (data.n == 1) {

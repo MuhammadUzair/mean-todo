@@ -91,6 +91,7 @@ router.delete('/todo/:id',function(req,res,next){
     }
     else{
         res.json(result);
+        console.log(result)
     }
     });
     
